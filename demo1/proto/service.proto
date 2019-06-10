@@ -1,0 +1,20 @@
+// gRPC服务在.proto文件中定义，用于生成相应的.pb.go文件。该.pb.go文件是由编译生成的.proto用协议的编译器文件：protoc。
+syntax = "proto3";
+
+package proto;// 定义生成.pg.go包的内容
+
+message Request {
+    int64 a = 1; // type name = size
+    int64 b = 2;
+}
+
+message Response {
+    int64 result = 1;
+}
+
+service AddService {
+    rpc Add(Request) returns (Response);
+    rpc Multiply(Request) returns (Response);
+}
+
+// protoc -I proto/ proto/service.proto --go_out=plugins=grpc:proto 生成文件
