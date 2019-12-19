@@ -18,3 +18,9 @@ service AddService {
 }
 
 // protoc -I proto/ proto/service.proto --go_out=plugins=grpc:proto 生成文件
+
+
+// protoc --go_out=plugins=grpc:. *.proto
+
+//             这里是按照grpc格式输出  :输出文件存放的位置   指定proto文件     
+// protoc --go_out=plugins=grpc:.  ...proto
