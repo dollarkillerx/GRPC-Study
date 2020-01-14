@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+message Req {
+    string msg = 1;
+}
+
+message Resp {
+    string code = 1;
+    string msg = 2;
+}
+
+
+service Hello {
+    rpc Result (Req) returns (Resp);
+}
