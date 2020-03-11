@@ -4,7 +4,7 @@ syntax = "proto3";
 package proto;// 定义生成.pg.go包的内容
 
 message Request {
-    int64 a = 1; // type name = size
+    int64 a = 1; // type name = id  1在这里是序号的意思
     int64 b = 2;
 }
 
